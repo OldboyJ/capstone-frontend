@@ -48,11 +48,11 @@ class PatientList extends Component {
         status = "glyphicon glyphicon-ban-circle";
       }
 
-      return <tr key={patient.PATIENTID}>
+      return <tr key={patient.patientdrugid}>
         <td>{patient.PATIENTID}</td>
         <td className={color}><Link to={/details/+ patient.patientdrugid} role="button" className="btn">{patient.FIRSTNAME} {patient.LASTNAME}</Link></td>
         <td className={color}><span className={status}></span></td>
-        <td><a onClick={ this.removeItem.bind(this,patient) }>remove</a></td>
+        <td><a href="#" onClick={ this.removeItem.bind(this,patient) }>remove</a></td>
       </tr>
     })
 
@@ -61,7 +61,7 @@ class PatientList extends Component {
       <div className="Patient-drug-table">
         <div className="container">
           <div className="row">
-            <div className="col-sm-12">
+            <div className="col-sm-8 col-sm-offset-2">
               <table className="table table-striped table-hover">
                 <thead>
                   <tr>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
   render() {
@@ -18,7 +19,7 @@ class Header extends Component {
 
           <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul className="nav navbar-nav">
-              <li><a href="#">Create New Patient </a></li>
+              <li><Link to="/new">Create New Patient</Link></li>
               <li><a href="#">About</a></li>
               <li><a href="#">Contact</a></li>
             </ul>

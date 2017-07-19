@@ -1,3 +1,8 @@
+
+.login-form {
+  margin-top: 200px;
+}
+
 .container {
   font-family: 'Lato', sans-serif;
   height: 20vh;
@@ -26,5 +31,9 @@
 }
 
 .col-sm-12, .top {
+  padding-top: 200px;
+}
+
+.col-sm-offset-2 {
   padding-top: 200px;
 }
