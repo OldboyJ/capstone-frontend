@@ -1,0 +1,30 @@
+.container {
+  font-family: 'Lato', sans-serif;
+  height: 20vh;
+  font-size: 14px;
+
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  color: white;
+}
+
+.navbar-inverse {
+  background-color: #293A48;
+}
+
+/*.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+  float: right;
+}*/
+
+.panel-default>.panel-heading {
+  background-color: #33b5e5;
+}
+
+.top-margin {
+  margin-top: 220px;
+}
+
+.col-sm-12, .top {
+  padding-top: 200px;
+}
