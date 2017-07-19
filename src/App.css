@@ -69,6 +69,6 @@ body{
   margin-top:5px;
   letter-spacing: 5px;
 }
-.col-sm-12, .top {
-  padding-top: 100px;
+.top {
+  padding-top: 15px;
 }

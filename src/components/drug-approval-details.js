@@ -12,7 +12,8 @@ class DrugApprovalDetails extends Component {
 
   componentDidMount() {
     let comp = this;
-    console.log('The outer', comp);
+    console.log('The outer', comp.props.match.params.approvalId);
+
     axios.get('http://localhost:8000/details/' + comp.props.match.params.approvalId).then(res => {
       let approval = res.data[0];
       if(approval.APPROVED === 1){
