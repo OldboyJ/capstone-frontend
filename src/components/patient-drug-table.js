@@ -52,7 +52,7 @@ class PatientList extends Component {
         <td>{patient.PATIENTID}</td>
         <td className={color}><Link to={/details/+ patient.patientdrugid} role="button" className="btn">{patient.FIRSTNAME} {patient.LASTNAME}</Link></td>
         <td className={color}><span className={status}></span></td>
-        <td><a href="#" onClick={ this.removeItem.bind(this,patient) }>remove</a></td>
+        <td><a className="btn btn-danger" href="#" onClick={ this.removeItem.bind(this,patient) }>Remove</a></td>
       </tr>
     })
 
@@ -61,8 +61,9 @@ class PatientList extends Component {
       <div className="Patient-drug-table">
         <div className="container">
           <div className="row">
-            <div className="col-sm-8 col-sm-offset-2">
-              <table className="table table-striped table-hover">
+            <div className="col-sm-8 col-sm-offset-2 text-right">
+              <Link to="/approval/new" className="btn btn-primary action-button">Create Approval</Link>
+              <table className="table table-striped table-hover text-left">
                 <thead>
                   <tr>
                     <th>Patient ID#</th>

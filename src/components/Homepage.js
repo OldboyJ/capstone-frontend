@@ -4,7 +4,7 @@ class Homepage extends Component {
 
   redirectToPatients(e) {
     e.preventDefault();
-    console.log('component', this);
+    this.props.history.push({pathname: '/patients'});
   }
 
   render() {
@@ -26,7 +26,7 @@ class Homepage extends Component {
                               <div className="form-group">
                                   <input className="form-control" placeholder="Password" name="password" type="password" value="" />
                               </div>
-                            <input className="btn btn-lg btn-success btn-block" type="submit" value="Login" />
+                            <input className="btn btn-lg btn-success btn-block action-button" type="submit" value="Login" />
                           </fieldset>
                         </form>
                     </div>

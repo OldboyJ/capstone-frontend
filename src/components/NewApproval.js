@@ -13,12 +13,15 @@ class NewApproval extends Component {
 
   handleSubmit(e) {
     e.preventDefault()
-    console.log('this.refs',this.refs);
-    axios.post('http://localhost:8000/details/approval', {
-      PATIENTID: this.refs.patient.value,
-      DRUGID: this.refs.drug.value,
-      DURATION: this.refs.duration.value
-    });
+    axios
+      .post('http://localhost:8000/details/approval', {
+        PATIENTID: this.refs.patient.value,
+        DRUGID: this.refs.drug.value,
+        DURATION: this.refs.duration.value
+      })
+      .then(() => {
+        this.props.history.push({pathname: '/patients'})
+      });
   }
 
   componentDidMount() {
@@ -44,37 +47,44 @@ class NewApproval extends Component {
 
 
     return (
-      <form onSubmit={this.handleSubmit.bind(this)} className="form-horizontal top-margin">
-        <fieldset>
-          <div className="form-group">
-            <label className="col-lg-2 control-label">Patients</label>
-            <div className="col-lg-10">
-              <select ref="patient" className="form-control" id="select">
-                {patients}
-              </select>
-            </div>
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-12">
+            <h1 className="text-center">New Approval Form</h1>
+            <form onSubmit={this.handleSubmit.bind(this)} className="form-horizontal">
+              <fieldset>
+                <div className="form-group">
+                  <label className="col-lg-2 control-label">Patients</label>
+                  <div className="col-lg-10">
+                    <select ref="patient" className="form-control" id="select">
+                      {patients}
+                    </select>
+                  </div>
+                </div>
+                <div className="form-group">
+                  <label className="col-lg-2 control-label">Drug</label>
+                  <div className="col-lg-10">
+                    <select ref="drug" className="form-control" id="select">
+                      {drugs}
+                    </select>
+                  </div>
+                </div>
+                <div className="form-group">
+                  <label className="col-lg-2 control-label">Duration</label>
+                  <div className="col-lg-10">
+                    <input type="text" className="form-control" id="inputEmail" placeholder="e.g. (in mg) 500 " ref="duration" />
+                  </div>
+                </div>
+                <div className="form-group">
+                  <div className="col-lg-10 col-lg-offset-2">
+                    <button type="submit" className="btn btn-primary action-button">Submit</button>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
           </div>
-          <div className="form-group">
-            <label className="col-lg-2 control-label">Drug</label>
-            <div className="col-lg-10">
-              <select ref="drug" className="form-control" id="select">
-                {drugs}
-              </select>
-            </div>
-          </div>
-          <div className="form-group">
-            <label className="col-lg-2 control-label">Duration</label>
-            <div className="col-lg-10">
-              <input type="text" className="form-control" id="inputEmail" placeholder="e.g. (in mg) 500 " ref="duration" />
-            </div>
-          </div>
-          <div className="form-group">
-            <div className="col-lg-10 col-lg-offset-2">
-              <button type="submit" className="btn btn-primary">Submit</button>
-            </div>
-          </div>
-        </fieldset>
-      </form>
+        </div>
+      </div>
     );
   }
 }
