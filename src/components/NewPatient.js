@@ -27,32 +27,32 @@ class NewPatient extends Component {
                <div className="form-group">
                  <label className="col-lg-2 control-label">First Name</label>
                  <div className="col-lg-10">
-                   <input type="text" className="form-control" id="inputEmail" placeholder="Email" ref="firstName" />
+                   <input type="text" className="form-control" id="inputEmail" placeholder="First" ref="firstName" />
                  </div>
                </div>
                <div className="form-group">
                  <label className="col-lg-2 control-label">Last Name</label>
                  <div className="col-lg-10">
-                   <input type="text" className="form-control" id="inputEmail" placeholder="Email" ref="lastName" />
+                   <input type="text" className="form-control" id="inputEmail" placeholder="Last" ref="lastName" />
                  </div>
                </div>
                <div className="form-group">
                  <label className="col-lg-2 control-label">Referral Source</label>
                  <div className="col-lg-10">
-                   <input type="text" className="form-control" id="inputEmail" placeholder="Email" ref="refSource" />
+                   <input type="text" className="form-control" id="inputEmail" placeholder="Hospital/clinic" ref="refSource" />
                  </div>
                </div>
                <hr />
                <div className="form-group">
                  <label className="col-lg-2 control-label">Plan Name</label>
                  <div className="col-lg-10">
-                   <input type="text" className="form-control" id="inputEmail" placeholder="Email" ref="planName" />
+                   <input type="text" className="form-control" id="inputEmail" placeholder="Plan" ref="planName" />
                  </div>
                </div>
                <div className="form-group">
                  <label className="col-lg-2 control-label">Plan ID</label>
                  <div className="col-lg-10">
-                   <input type="text" className="form-control" id="inputEmail" placeholder="Email" ref="planId" />
+                   <input type="text" className="form-control" id="inputEmail" placeholder="ID" ref="planId" />
                  </div>
                </div>
                <div className="form-group">

@@ -24,7 +24,7 @@ class Homepage extends Component {
                                 <input className="form-control" placeholder="E-mail" name="email" type="text" />
                               </div>
                               <div className="form-group">
-                                  <input className="form-control" placeholder="Password" name="password" type="password" value="" />
+                                  <input className="form-control" placeholder="Password" name="password" type="password" />
                               </div>
                             <input className="btn btn-lg btn-success btn-block action-button" type="submit" value="Login" />
                           </fieldset>
