@@ -21,7 +21,7 @@ class Homepage extends Component {
                         <form onSubmit={this.redirectToPatients.bind(this)}>
                   <fieldset>
                               <div className="form-group">
-                                <input className="form-control" placeholder="E-mail" name="email" type="text" />
+                                <input className="form-control" placeholder="UserID" name="userid" type="text" />
                               </div>
                               <div className="form-group">
                                   <input className="form-control" placeholder="Password" name="password" type="password" />

@@ -26,7 +26,7 @@ class NewApproval extends Component {
 
   componentDidMount() {
     let self = this;
-    axios.get('http://localhost:8000/patients').then(patients => {
+    axios.get('http://localhost:8000/patients/all').then(patients => {
       axios.get('http://localhost:8000/drug').then(drugs => {
         self.setState({patients: patients.data, drugs: drugs.data})
       })
