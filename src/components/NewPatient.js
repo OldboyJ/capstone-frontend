@@ -1,19 +1,16 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 
-var counter = 1000020;
+// var counter = 1000020;
 
 class NewPatient extends Component {
 
   handleSubmit(e) {
     e.preventDefault()
-    function patientIdCreator() {
-      counter++;
-      return 'PIF-0' + counter;
-    }
+
     axios
       .post('http://localhost:8000/patients', {
-        PATIENTID: patientIdCreator(),
+        
         FIRSTNAME: this.refs.firstName.value,
         LASTNAME: this.refs.lastName.value,
         REFERRALSRC: this.refs.refSource.value,
